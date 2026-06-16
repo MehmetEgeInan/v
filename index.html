@@ -83,6 +83,10 @@
         .music-bar:nth-child(3) { height: 12px; animation-delay: 0.2s; }
         .music-bar:nth-child(4) { height: 18px; animation-delay: 0.3s; }
         @keyframes bar-dance { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.5); } }
+        
+        /* ÇİFT İSİMLERİ LOGOSU (YENİ EKLENDİ) */
+        .couple-names { font-size: clamp(1rem, 3vw, 1.4rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; filter: drop-shadow(0 0 8px rgba(255,105,180,0.5)); display: block; }
+        
         @media (max-height: 700px) { .teddy-head { font-size: clamp(70px, 15vw, 120px); } .teddy-feet { display: none; } .card { padding: 20px 25px; } }
         @media (max-width: 400px) { .teddy-paw-left, .teddy-paw-right { font-size: 40px; } .teddy-paw-left { left: -50px; } .teddy-paw-right { right: -50px; } }
         @media (max-height: 500px) { .teddy-head { font-size: 60px; } .teddy-paw-left, .teddy-paw-right { font-size: 35px; } .big-heart { font-size: 35px; margin-bottom: 5px; } .title { font-size: 1.2rem; margin-bottom: 5px; } .subtitle { font-size: 0.8rem; margin-bottom: 10px; } .question { font-size: 1rem; padding: 10px 15px; margin-bottom: 10px; } .love-note { padding: 10px; margin-top: 10px; } }
@@ -106,12 +110,11 @@
             <div class="teddy-torso">🧸</div>
             <div class="teddy-paw-left">🐾</div>
 
-            <!-- KART İÇERİĞİ -->
             <div class="card" id="mainCard">
+                <span class="couple-names">✨ Ege ❤️ Sena ✨</span>
                 <div class="big-heart">💖</div>
-                <h1 class="title">Selam, özledim ✨</h1>
+                <h1 class="title">Selamözledim ✨</h1>
                 
-                <!-- FOTOĞRAFLAR ALANI (YENİ EKLENDİ) -->
                 <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px; margin-bottom: 20px; flex-wrap: wrap;">
                     <img src="kiz1.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
                     <img src="kiz2.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
@@ -137,7 +140,6 @@
 
     <div class="hover-message" id="hoverMessage">Hayır seçeneği bir alternatif değil! 😜💕</div>
 
-    <!-- Fon Müziği Ayarı -->
     <audio id="bgMusic" loop preload="auto">
         <source src="Sade - Your Love Is King - Official - 1984.mp3" type="audio/mpeg">
     </audio>

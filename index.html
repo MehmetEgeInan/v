@@ -64,12 +64,12 @@
         .couple-names { font-size: clamp(1rem, 3vw, 1.4rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; filter: drop-shadow(0 0 8px rgba(255,105,180,0.5)); display: block; }
         .love-note { margin-top: 15px; }
 
-        /* DETAYLI FOTOĞRAF PANEL SİSTEMİ */
+        /* FOTOĞRAF PANEL SİSTEMİ */
         .side-photo { position: fixed; width: clamp(90px, 10vw, 130px); height: clamp(90px, 10vw, 130px); border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 8px 25px rgba(0,0,0,0.5); z-index: 5; animation: gentle-float 4s ease-in-out infinite; }
-        .photo-left-1 { left: 3vw; top: 15%; animation-delay: 0s; border-color: #ff69b4; }
+        .photo-left-1 { left: 3vw; top: 15%; animation-delay: 0s; }
         .photo-left-2 { left: 4vw; top: 55%; animation-delay: 0.8s; border-color: #ffd700; }
-        .photo-right-1 { right: 3vw; top: 15%; animation-delay: 0.4s; border-color: #a855f7; }
-        .photo-right-2 { right: 4vw; top: 55%; animation-delay: 1.2s; border-color: #ff1493; }
+        .photo-right-1 { right: 4vw; top: 15%; animation-delay: 0.4s; border-color: #ffd700; }
+        .photo-right-2 { right: 3vw; top: 55%; animation-delay: 1.2s; }
         
         .photo-flow-container { display: flex; gap: 8px; justify-content: center; margin-top: 5px; margin-bottom: 15px; flex-wrap: wrap; }
         .flow-img { width: clamp(65px, 11vw, 80px); height: clamp(65px, 11vw, 80px); border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s; }
@@ -113,6 +113,7 @@
     <div class="decoration deco-3">🌷</div>
     <div class="decoration deco-4">🌹</div>
 
+    <!-- MASAÜSTÜ SÜZÜLEN YAN FOTOĞRAFLAR (SIRALI) -->
     <img src="kiz1.jpeg" class="side-photo photo-left-1" alt="Sena 1">
     <img src="erkek1.jpeg" class="side-photo photo-left-2" alt="Ege 1">
     <img src="erkek2.jpeg" class="side-photo photo-right-1" alt="Ege 2">
@@ -129,11 +130,13 @@
             <div class="teddy-torso">🧸</div>
             <div class="teddy-paw-left">🐾</div>
 
+            <!-- KART İÇERİĞİ -->
             <div class="card" id="mainCard">
                 <span class="couple-names">✨ Ege ❤️ Sena ✨</span>
                 <div class="big-heart">💖</div>
                 <h1 class="title">Selam, özledim ✨</h1>
                 
+                <!-- SIRALI 5'Lİ FOTOĞRAF AKIŞI -->
                 <div class="photo-flow-container">
                     <img src="kiz1.jpeg" class="flow-img" alt="Sena 1">
                     <img src="erkek1.jpeg" class="flow-img" alt="Ege 1">
@@ -161,6 +164,7 @@
 
     <div class="hover-message" id="hoverMessage">Hayır seçeneği bir alternatif değil! 😜💕</div>
 
+    <!-- Fon Müziği Ayarı -->
     <audio id="bgMusic" loop preload="auto">
         <source src="Sade - Your Love Is King - Official - 1984.mp3" type="audio/mpeg">
     </audio>

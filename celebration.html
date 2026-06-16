@@ -127,9 +127,28 @@
         @keyframes float-to-meter { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.5) translateY(-50px); } }
         .music-btn { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #ff69b4, #a855f7); color: white; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; font-size: 22px; z-index: 9999; box-shadow: 0 5px 25px rgba(255,105,180,0.5); transition: all 0.3s ease; animation: pulse-music 2s ease-in-out infinite; display: flex; justify-content: center; align-items: center; }
         
-        /* ÇİFT İSİMLERİ LOGOSU (YENİ EKLENDİ) */
         .couple-names-celebrate { font-size: clamp(1.2rem, 3.5vw, 1.6rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; filter: drop-shadow(0 0 10px rgba(255,105,180,0.6)); display: block; }
         
+        /* FOTOĞRAF PANEL STİLLERİ (YENİLENDİ) */
+        .side-photo { position: fixed; width: clamp(80px, 9vw, 120px); height: clamp(80px, 9vw, 120px); border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 8px 25px rgba(0,0,0,0.5); z-index: 5; animation: gentle-float 4s ease-in-out infinite; }
+        .photo-left-1 { left: 3vw; top: 15%; animation-delay: 0s; border-color: #ff69b4; }
+        .photo-left-2 { left: 4vw; top: 55%; animation-delay: 0.8s; border-color: #ffd700; }
+        .photo-right-1 { right: 4vw; top: 15%; animation-delay: 0.4s; border-color: #ff1493; }
+        .photo-right-2 { right: 3vw; top: 55%; animation-delay: 1.2s; border-color: #a855f7; }
+
+        .photo-flow-container { display: none; gap: 8px; justify-content: center; margin-top: 5px; margin-bottom: 20px; flex-wrap: wrap; }
+        .flow-img { width: clamp(65px, 11vw, 80px); height: clamp(65px, 11vw, 80px); border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); animation: gentle-float 3s ease-in-out infinite; }
+        .flow-img:nth-child(odd) { border: 3px solid #ff69b4; }
+        .flow-img:nth-child(even) { border: 3px solid #ffd700; }
+
+        /* Masaüstünde ortada duracak tek ana fotoğraf */
+        .main-photo-center { display: flex; justify-content: center; margin-top: 10px; margin-bottom: 25px; z-index: 15; position: relative; }
+
+        @media (max-width: 900px) {
+            .side-photo { display: none !important; }
+            .main-photo-center { display: none !important; }
+            .photo-flow-container { display: flex !important; }
+        }
         @media (max-width: 600px) { .yay-text { font-size: 2.2rem; } .yay-text .name-celebrate { font-size: 2.6rem; } .sub-message { font-size: 1.2rem; } .love-card { padding: 30px 20px; } .love-title { font-size: 1.3rem; } .love-text { font-size: 1rem; } .mega-heart { font-size: 70px; } .love-jar { font-size: 90px; } .decoration { font-size: 35px; } .buttons-row { gap: 10px; } .action-btn { padding: 12px 25px; font-size: 0.9rem; } .love-note-popup { padding: 30px 25px; } .love-note-popup .note-text { font-size: 1.1rem; } .love-meter-wrapper { width: 250px; } .love-meter-container { height: 30px; } .infinity-svg-wrapper { width: 160px; height: 65px; } .infinity-path { stroke-width: 6; } .hug-gif { width: clamp(180px, 70vw, 280px); } .hug-message { font-size: 1.1rem; top: calc(50% + 170px); white-space: normal; padding: 15px 25px; } }
     </style>
 </head>
@@ -144,6 +163,11 @@
     <div class="decoration deco-5">🌺</div>
     <div class="decoration deco-6">🌷</div>
 
+    <img src="kiz1.jpeg" class="side-photo photo-left-1" alt="Sena 1">
+    <img src="erkek1.jpeg" class="side-photo photo-left-2" alt="Ege 1">
+    <img src="erkek2.jpeg" class="side-photo photo-right-1" alt="Ege 2">
+    <img src="kiz3.jpeg" class="side-photo photo-right-2" alt="Sena 3">
+
     <div class="celebration-container">
         <div class="mega-heart" id="megaHeart" onclick="handleInteraction(event, 'heart')">💖</div>
         
@@ -155,10 +179,16 @@
             <p class="sub-message">Şu an beni dünyanın en mutlu insanı yaptın! 💕</p>
         </div>
 
-        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 10px; margin-bottom: 25px; flex-wrap: wrap; z-index: 15; position: relative;">
-            <img src="kiz1.jpeg" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 15px rgba(0,0,0,0.4); animation: gentle-float 3s ease-in-out infinite;">
-            <img src="kiz2.jpeg" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 15px rgba(0,0,0,0.4); animation: gentle-float 3s ease-in-out infinite; animation-delay: 0.5s;">
-            <img src="kiz3.jpeg" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 15px rgba(0,0,0,0.4); animation: gentle-float 3s ease-in-out infinite; animation-delay: 1s;">
+        <div class="photo-flow-container">
+            <img src="kiz1.jpeg" class="flow-img" alt="Sena 1">
+            <img src="erkek1.jpeg" class="flow-img" alt="Ege 1">
+            <img src="kiz2.jpeg" class="flow-img" alt="Sena 2" style="transform: scale(1.05);">
+            <img src="erkek2.jpeg" class="flow-img" alt="Ege 2">
+            <img src="kiz3.jpeg" class="flow-img" alt="Sena 3">
+        </div>
+
+        <div class="main-photo-center">
+            <img src="kiz2.jpeg" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 15px rgba(0,0,0,0.4); animation: gentle-float 3s ease-in-out infinite; animation-delay: 0.5s;">
         </div>
 
         <div class="love-card">

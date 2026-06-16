@@ -45,25 +45,38 @@
         .teddy-love:nth-child(2) { animation-delay: 1s; }
         .teddy-love:nth-child(3) { animation-delay: 2s; }
         @keyframes heart-float { 0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; } 50% { transform: translateY(-15px) scale(1.2); opacity: 1; } }
-        .card { background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%); border-radius: clamp(15px, 3vw, 30px); padding: clamp(25px, 4vw, 50px) clamp(20px, 5vw, 60px); text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 60px rgba(255,105,180,0.2), inset 0 1px 0 rgba(255,255,255,0.1); border: 2px solid rgba(255,105,180,0.5); position: relative; z-index: 10; animation: card-appear 1s ease-out; max-width: min(95vw, 650px); max-height: 75vh; overflow-y: auto; }
+        .card { background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%); border-radius: clamp(15px, 3vw, 30px); padding: clamp(20px, 4vw, 40px) clamp(15px, 4vw, 45px); text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 60px rgba(255,105,180,0.2), inset 0 1px 0 rgba(255,255,255,0.1); border: 2px solid rgba(255,105,180,0.5); position: relative; z-index: 10; animation: card-appear 1s ease-out; max-width: min(95vw, 650px); max-height: 85vh; overflow-y: auto; }
         @keyframes card-appear { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
         .card::before { content: ''; position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px; background: linear-gradient(45deg, #ff6b6b, #ff69b4, #a855f7, #ff1493, #ff6b6b); border-radius: clamp(17px, 3.2vw, 32px); z-index: -1; animation: glow-border 4s linear infinite; background-size: 400% 400%; }
         @keyframes glow-border { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .big-heart { font-size: clamp(40px, 10vw, 70px); animation: heartbeat 1.5s ease-in-out infinite; display: inline-block; margin-bottom: 10px; filter: drop-shadow(0 0 25px rgba(255,105,180,0.8)); }
+        .big-heart { font-size: clamp(35px, 8vw, 55px); animation: heartbeat 1.5s ease-in-out infinite; display: inline-block; margin-bottom: 5px; filter: drop-shadow(0 0 25px rgba(255,105,180,0.8)); }
         @keyframes heartbeat { 0%, 100% { transform: scale(1); } 25% { transform: scale(1.1); } 40% { transform: scale(1); } 60% { transform: scale(1.1); } }
-        .title { font-size: clamp(1.3rem, 5vw, 2.2rem); color: #ffffff; margin-bottom: 10px; text-shadow: 0 0 20px rgba(255,105,180,0.8), 0 0 40px rgba(255,105,180,0.5); }
-        .name-highlight { background: linear-gradient(135deg, #ffd700, #ffaa00, #fff176); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic; font-weight: bold; filter: drop-shadow(0 0 15px rgba(255,215,0,0.8)); }
-        .subtitle { font-size: clamp(0.85rem, 2.5vw, 1.1rem); color: #b8b8d1; margin-bottom: clamp(15px, 3vh, 30px); font-style: italic; }
-        .question { font-size: clamp(1.1rem, 4vw, 1.8rem); color: #ffffff; margin-bottom: clamp(15px, 3vh, 30px); text-shadow: 0 0 20px rgba(255,105,180,0.8); background: linear-gradient(135deg, rgba(168,85,247,0.2) 0%, rgba(255,105,180,0.15) 100%); padding: clamp(12px, 2.5vw, 20px) clamp(15px, 3vw, 30px); border-radius: 15px; border: 1px solid rgba(255,105,180,0.3); }
+        .title { font-size: clamp(1.2rem, 4.5vw, 1.8rem); color: #ffffff; margin-bottom: 8px; text-shadow: 0 0 20px rgba(255,105,180,0.8), 0 0 40px rgba(255,105,180,0.5); }
+        .subtitle { font-size: clamp(0.8rem, 2.2vw, 1rem); color: #b8b8d1; margin-bottom: 15px; font-style: italic; }
+        .question { font-size: clamp(1rem, 3.5vw, 1.5rem); color: #ffffff; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255,105,180,0.8); background: linear-gradient(135deg, rgba(168,85,247,0.2) 0%, rgba(255,105,180,0.15) 100%); padding: 10px 15px; border-radius: 15px; border: 1px solid rgba(255,105,180,0.3); }
         .buttons-container { display: flex; gap: clamp(15px, 3vw, 30px); justify-content: center; align-items: center; min-height: 60px; position: relative; flex-wrap: wrap; }
-        .btn { padding: clamp(12px, 2vw, 18px) clamp(25px, 5vw, 50px); font-size: clamp(1rem, 2.5vw, 1.3rem); font-family: 'Georgia', serif; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .btn { padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 40px); font-size: clamp(0.9rem, 2.2vw, 1.1rem); font-family: 'Georgia', serif; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         .btn-yes { background: linear-gradient(135deg, #ff6b6b 0%, #ff1493 50%, #ff69b4 100%); color: white; box-shadow: 0 8px 25px rgba(255,105,180,0.4), 0 0 0 0 rgba(255,105,180,0.7); animation: yes-pulse 2s ease-in-out infinite; position: relative; z-index: 100; }
         @keyframes yes-pulse { 0%, 100% { box-shadow: 0 8px 25px rgba(255,105,180,0.4), 0 0 0 0 rgba(255,105,180,0.7); } 50% { box-shadow: 0 8px 25px rgba(255,105,180,0.4), 0 0 0 15px rgba(255,105,180,0); } }
         .btn-yes:hover { transform: scale(1.1); box-shadow: 0 12px 35px rgba(255,105,180,0.6), 0 0 50px rgba(255,105,180,0.4); }
         .btn-no { background: linear-gradient(135deg, #4a4a6a 0%, #6a6a8a 100%); color: white; transition: all 0.15s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.3); position: relative; z-index: 99; }
         .btn-no:hover { cursor: not-allowed; }
-        .love-note { margin-top: clamp(15px, 3vh, 30px); padding: clamp(12px, 2vw, 20px); border-top: 1px solid rgba(255,105,180,0.2); color: #c8c8e0; font-size: clamp(0.85rem, 2.5vw, 1rem); font-style: italic; background: linear-gradient(135deg, rgba(168,85,247,0.1) 0%, rgba(255,105,180,0.08) 100%); border-radius: 12px; }
-        .love-note span { color: #fff694; font-weight: bold; }
+        .couple-names { font-size: clamp(1rem, 3vw, 1.4rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; filter: drop-shadow(0 0 8px rgba(255,105,180,0.5)); display: block; }
+        .love-note { margin-top: 15px; }
+
+        /* DETAYLI FOTOĞRAF PANEL SİSTEMİ */
+        .side-photo { position: fixed; width: clamp(90px, 10vw, 130px); height: clamp(90px, 10vw, 130px); border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 8px 25px rgba(0,0,0,0.5); z-index: 5; animation: gentle-float 4s ease-in-out infinite; }
+        .photo-left-1 { left: 3vw; top: 15%; animation-delay: 0s; border-color: #ff69b4; }
+        .photo-left-2 { left: 4vw; top: 55%; animation-delay: 0.8s; border-color: #ffd700; }
+        .photo-right-1 { right: 3vw; top: 15%; animation-delay: 0.4s; border-color: #a855f7; }
+        .photo-right-2 { right: 4vw; top: 55%; animation-delay: 1.2s; border-color: #ff1493; }
+        
+        .photo-flow-container { display: flex; gap: 8px; justify-content: center; margin-top: 5px; margin-bottom: 15px; flex-wrap: wrap; }
+        .flow-img { width: clamp(65px, 11vw, 80px); height: clamp(65px, 11vw, 80px); border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s; }
+        .flow-img:nth-child(odd) { border: 3px solid #ff69b4; }
+        .flow-img:nth-child(even) { border: 3px solid #ffd700; }
+        .flow-img:hover { transform: scale(1.1) rotate(3deg); }
+
         .hover-message { position: fixed; bottom: clamp(20px, 5vh, 50px); left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ff1493 0%, #a855f7 100%); color: #ffffff; padding: clamp(12px, 2vw, 18px) clamp(20px, 4vw, 35px); border-radius: 30px; font-size: clamp(0.9rem, 2.5vw, 1.2rem); font-weight: bold; opacity: 0; transition: opacity 0.3s ease; z-index: 1000; box-shadow: 0 10px 40px rgba(168,85,247,0.5), 0 0 20px rgba(255,105,180,0.3); border: 2px solid rgba(255,255,255,0.3); pointer-events: none; white-space: nowrap; max-width: 90vw; text-align: center; }
         .hover-message.show { opacity: 1; animation: bounce-message 0.5s ease; }
         @keyframes bounce-message { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
@@ -84,12 +97,13 @@
         .music-bar:nth-child(4) { height: 18px; animation-delay: 0.3s; }
         @keyframes bar-dance { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.5); } }
         
-        /* ÇİFT İSİMLERİ LOGOSU (YENİ EKLENDİ) */
-        .couple-names { font-size: clamp(1rem, 3vw, 1.4rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; filter: drop-shadow(0 0 8px rgba(255,105,180,0.5)); display: block; }
-        
-        @media (max-height: 700px) { .teddy-head { font-size: clamp(70px, 15vw, 120px); } .teddy-feet { display: none; } .card { padding: 20px 25px; } }
+        @media (max-width: 900px) {
+            .side-photo { display: none !important; }
+            .photo-flow-container { display: flex !important; }
+        }
+        @media (max-height: 700px) { .teddy-head { font-size: clamp(70px, 15vw, 120px); } .teddy-feet { display: none; } .card { padding: 15px 20px; } }
         @media (max-width: 400px) { .teddy-paw-left, .teddy-paw-right { font-size: 40px; } .teddy-paw-left { left: -50px; } .teddy-paw-right { right: -50px; } }
-        @media (max-height: 500px) { .teddy-head { font-size: 60px; } .teddy-paw-left, .teddy-paw-right { font-size: 35px; } .big-heart { font-size: 35px; margin-bottom: 5px; } .title { font-size: 1.2rem; margin-bottom: 5px; } .subtitle { font-size: 0.8rem; margin-bottom: 10px; } .question { font-size: 1rem; padding: 10px 15px; margin-bottom: 10px; } .love-note { padding: 10px; margin-top: 10px; } }
+        @media (max-height: 500px) { .teddy-head { font-size: 60px; } .teddy-paw-left, .teddy-paw-right { font-size: 35px; } .big-heart { font-size: 35px; margin-bottom: 5px; } .title { font-size: 1.2rem; margin-bottom: 5px; } .subtitle { font-size: 0.8rem; margin-bottom: 10px; } .question { font-size: 1rem; padding: 10px 15px; margin-bottom: 10px; } }
     </style>
 </head>
 <body>
@@ -98,6 +112,11 @@
     <div class="decoration deco-2">🌺</div>
     <div class="decoration deco-3">🌷</div>
     <div class="decoration deco-4">🌹</div>
+
+    <img src="kiz1.jpeg" class="side-photo photo-left-1" alt="Sena 1">
+    <img src="erkek1.jpeg" class="side-photo photo-left-2" alt="Ege 1">
+    <img src="erkek2.jpeg" class="side-photo photo-right-1" alt="Ege 2">
+    <img src="kiz3.jpeg" class="side-photo photo-right-2" alt="Sena 3">
 
     <div class="teddy-wrapper">
         <div class="teddy-hearts">
@@ -113,12 +132,14 @@
             <div class="card" id="mainCard">
                 <span class="couple-names">✨ Ege ❤️ Sena ✨</span>
                 <div class="big-heart">💖</div>
-                <h1 class="title">Selamözledim ✨</h1>
+                <h1 class="title">Selam, özledim ✨</h1>
                 
-                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px; margin-bottom: 20px; flex-wrap: wrap;">
-                    <img src="kiz1.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-                    <img src="kiz2.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-                    <img src="kiz3.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <div class="photo-flow-container">
+                    <img src="kiz1.jpeg" class="flow-img" alt="Sena 1">
+                    <img src="erkek1.jpeg" class="flow-img" alt="Ege 1">
+                    <img src="kiz2.jpeg" class="flow-img" alt="Sena 2" style="transform: scale(1.08); box-shadow: 0 4px 15px rgba(255,105,180,0.5);">
+                    <img src="erkek2.jpeg" class="flow-img" alt="Ege 2">
+                    <img src="kiz3.jpeg" class="flow-img" alt="Sena 3">
                 </div>
 
                 <p class="subtitle">Sana sormak istediğim çok özel bir şey var...</p>

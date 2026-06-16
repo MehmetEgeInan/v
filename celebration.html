@@ -117,24 +117,14 @@
         .love-meter-text { color: #ff69b4; font-size: 1.1rem; margin-top: 15px; font-weight: bold; transition: all 0.3s ease; min-height: 30px; }
         .love-meter-text.infinity-text { background: linear-gradient(90deg, #ff69b4, #ffd700, #a855f7, #ff69b4); background-size: 300% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-flow 2s linear infinite; font-size: 1.3rem; }
         
-        .click-heart { position: fixed; pointer-events: none; animation: pop-heart 1s ease-out forwards; z-index: 999; }
-        @keyframes pop-heart { 0% { opacity: 1; transform: scale(0) translateY(0); } 50% { opacity: 1; transform: scale(1.3) translateY(-20px); } 100% { opacity: 0; transform: scale(0.8) translateY(-50px); } }
-        .sparkle { position: fixed; pointer-events: none; width: 8px; height: 8px; border-radius: 50%; background: radial-gradient(circle, #ff69b4, transparent); animation: sparkle-fade 0.6s ease-out forwards; z-index: 9999; }
-        @keyframes sparkle-fade { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(2); } }
-        .emoji-rain { position: fixed; animation: rain-fall linear forwards; font-size: 28px; z-index: 500; pointer-events: none; }
-        @keyframes rain-fall { 0% { opacity: 1; transform: translateY(-50px) rotate(0deg); } 100% { opacity: 0; transform: translateY(100vh) rotate(360deg); } }
-        .meter-fill-indicator { position: fixed; font-size: 25px; pointer-events: none; z-index: 1001; animation: float-to-meter 0.8s ease-out forwards; }
-        @keyframes float-to-meter { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.5) translateY(-50px); } }
-        .music-btn { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #ff69b4, #a855f7); color: white; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; font-size: 22px; z-index: 9999; box-shadow: 0 5px 25px rgba(255,105,180,0.5); transition: all 0.3s ease; animation: pulse-music 2s ease-in-out infinite; display: flex; justify-content: center; align-items: center; }
-        
         .couple-names-celebrate { font-size: clamp(1.2rem, 3.5vw, 1.6rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; filter: drop-shadow(0 0 10px rgba(255,105,180,0.6)); display: block; }
         
-        /* FOTOĞRAF PANEL STİLLERİ (YENİLENDİ) */
+        /* FOTOĞRAF PANEL STİLLERİ (SIRALI 4'LÜ YAN PANEL) */
         .side-photo { position: fixed; width: clamp(80px, 9vw, 120px); height: clamp(80px, 9vw, 120px); border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 8px 25px rgba(0,0,0,0.5); z-index: 5; animation: gentle-float 4s ease-in-out infinite; }
         .photo-left-1 { left: 3vw; top: 15%; animation-delay: 0s; border-color: #ff69b4; }
         .photo-left-2 { left: 4vw; top: 55%; animation-delay: 0.8s; border-color: #ffd700; }
-        .photo-right-1 { right: 4vw; top: 15%; animation-delay: 0.4s; border-color: #ff1493; }
-        .photo-right-2 { right: 3vw; top: 55%; animation-delay: 1.2s; border-color: #a855f7; }
+        .photo-right-1 { right: 4vw; top: 15%; animation-delay: 0.4s; border-color: #ffd700; }
+        .photo-right-2 { right: 3vw; top: 55%; animation-delay: 1.2s; border-color: #ff69b4; }
 
         .photo-flow-container { display: none; gap: 8px; justify-content: center; margin-top: 5px; margin-bottom: 20px; flex-wrap: wrap; }
         .flow-img { width: clamp(65px, 11vw, 80px); height: clamp(65px, 11vw, 80px); border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); animation: gentle-float 3s ease-in-out infinite; }
@@ -163,6 +153,7 @@
     <div class="decoration deco-5">🌺</div>
     <div class="decoration deco-6">🌷</div>
 
+    <!-- MASAÜSTÜ SÜZÜLEN YAN FOTOĞRAFLAR (TAM SIRALI) -->
     <img src="kiz1.jpeg" class="side-photo photo-left-1" alt="Sena 1">
     <img src="erkek1.jpeg" class="side-photo photo-left-2" alt="Ege 1">
     <img src="erkek2.jpeg" class="side-photo photo-right-1" alt="Ege 2">
@@ -179,6 +170,7 @@
             <p class="sub-message">Şu an beni dünyanın en mutlu insanı yaptın! 💕</p>
         </div>
 
+        <!-- MOBİL EKRANLAR İÇİN 5'Lİ SIRALI FOTOĞRAF AKIŞI -->
         <div class="photo-flow-container">
             <img src="kiz1.jpeg" class="flow-img" alt="Sena 1">
             <img src="erkek1.jpeg" class="flow-img" alt="Ege 1">
@@ -187,10 +179,12 @@
             <img src="kiz3.jpeg" class="flow-img" alt="Sena 3">
         </div>
 
+        <!-- MASAÜSTÜ İÇİN MERKEZDE DURACAK ORTA FOTOĞRAF -->
         <div class="main-photo-center">
             <img src="kiz2.jpeg" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 15px rgba(0,0,0,0.4); animation: gentle-float 3s ease-in-out infinite; animation-delay: 0.5s;">
         </div>
 
+        <!-- MEKTUP KARTI -->
         <div class="love-card">
             <span class="corner-deco corner-tl">🦋</span>
             <span class="corner-deco corner-tr">🦋</span>
@@ -216,6 +210,7 @@
             <button class="action-btn secondary" onclick="handleInteraction(event, 'hug')">🤗 Sarılma Gönder!</button>
         </div>
 
+        <!-- AŞK KAVANOZU BÖLÜMÜ -->
         <div class="love-jar-section">
             <h3 class="love-jar-title">✨ Seni Seviyorum Çünkü... Öğrenmek İçin Kavanoza Tıkla! ✨</h3>
             <div class="love-jar-container">

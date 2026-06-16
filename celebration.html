@@ -32,7 +32,7 @@
         
         /* AŞK MEKTUBU KARTI */
         .love-card { background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%); border-radius: 30px; padding: 45px 55px; max-width: 650px; width: 90%; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 80px rgba(255,105,180,0.15); border: 2px solid rgba(255,105,180,0.4); animation: fade-in-up 1s ease-out 0.6s both; position: relative; overflow: hidden; }
-        .love-card::before { content: ''; position: absolute; top: -半%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(168,85,247,0.1), transparent); animation: shimmer 3s ease-in-out infinite; }
+        .love-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(168,85,247,0.1), transparent); animation: shimmer 3s ease-in-out infinite; }
         @keyframes shimmer { 0% { transform: translateX(-100%) rotate(45deg); } 100% { transform: translateX(100%) rotate(45deg); } }
         .love-title { font-size: 1.7rem; color: #ff69b4; margin-bottom: 25px; position: relative; }
         .love-text { font-size: 1.1rem; color: #d0d0e8; line-height: 1.9; position: relative; }
@@ -126,6 +126,10 @@
         .meter-fill-indicator { position: fixed; font-size: 25px; pointer-events: none; z-index: 1001; animation: float-to-meter 0.8s ease-out forwards; }
         @keyframes float-to-meter { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.5) translateY(-50px); } }
         .music-btn { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #ff69b4, #a855f7); color: white; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; font-size: 22px; z-index: 9999; box-shadow: 0 5px 25px rgba(255,105,180,0.5); transition: all 0.3s ease; animation: pulse-music 2s ease-in-out infinite; display: flex; justify-content: center; align-items: center; }
+        
+        /* ÇİFT İSİMLERİ LOGOSU (YENİ EKLENDİ) */
+        .couple-names-celebrate { font-size: clamp(1.2rem, 3.5vw, 1.6rem); font-weight: bold; background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; filter: drop-shadow(0 0 10px rgba(255,105,180,0.6)); display: block; }
+        
         @media (max-width: 600px) { .yay-text { font-size: 2.2rem; } .yay-text .name-celebrate { font-size: 2.6rem; } .sub-message { font-size: 1.2rem; } .love-card { padding: 30px 20px; } .love-title { font-size: 1.3rem; } .love-text { font-size: 1rem; } .mega-heart { font-size: 70px; } .love-jar { font-size: 90px; } .decoration { font-size: 35px; } .buttons-row { gap: 10px; } .action-btn { padding: 12px 25px; font-size: 0.9rem; } .love-note-popup { padding: 30px 25px; } .love-note-popup .note-text { font-size: 1.1rem; } .love-meter-wrapper { width: 250px; } .love-meter-container { height: 30px; } .infinity-svg-wrapper { width: 160px; height: 65px; } .infinity-path { stroke-width: 6; } .hug-gif { width: clamp(180px, 70vw, 280px); } .hug-message { font-size: 1.1rem; top: calc(50% + 170px); white-space: normal; padding: 15px 25px; } }
     </style>
 </head>
@@ -163,6 +167,7 @@
             <span class="corner-deco corner-bl">✨</span>
             <span class="corner-deco corner-br">✨</span>
             
+            <span class="couple-names-celebrate">✨ Ege ❤️ Sena ✨</span>
             <h2 class="love-title">💌 Benim İçin Çok Özelsin 💌</h2>
             
             <div class="love-text">
@@ -295,7 +300,7 @@
             { emoji: "🎵", text: "Sesin, duyduğum en huzur verici ve neşeli ses olduğu için." },
             { emoji: "🤗", text: "Seninle konuşurken kendimi çok rahat ve güvende hissettiğim için." },
             { emoji: "✨", text: "En sıradan anları bile bir şekilde eğlenceli hale getirebildiğin için." },
-            { emoji: "💪", text: "Bana her zaman harika bir enerji verdiğin ve destek olduğun için." },
+            { emoji: "💪", text: "Bana her zaman harika bir energy verdiğin ve destek olduğun için." },
             { emoji: "🦋", text: "Mesajıma her cevap verdiğinde hala içimi tatlı bir heyecan kapladığı için." },
             { emoji: "🌟", text: "Hayata bakışın ve yaydığın o ışık için." },
             { emoji: "🥰", text: "Bana kendimi çok özel ve şanslı hissettirdiğin için." },

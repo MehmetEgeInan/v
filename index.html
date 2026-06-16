@@ -109,16 +109,22 @@
             <!-- KART İÇERİĞİ -->
             <div class="card" id="mainCard">
                 <div class="big-heart">💖</div>
-                <h1 class="title">Selamözledim ✨</h1>
+                <h1 class="title">Selam, özledim ✨</h1>
+                
+                <!-- FOTOĞRAFLAR ALANI (YENİ EKLENDİ) -->
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <img src="kiz1.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <img src="kiz2.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <img src="kiz3.jpeg" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                </div>
+
                 <p class="subtitle">Sana sormak istediğim çok özel bir şey var...</p>
                 <h2 class="question">Sınavdan sonra Balıkesir date v2 yapmak ister misin? ❤️</h2>
                 <div class="buttons-container" id="buttonsContainer">
                     <button class="btn btn-yes" id="yesBtn" onclick="sayYes()">Evet! 💖</button>
                     <button class="btn btn-no" id="noBtn" onmouseover="runAway()" onclick="runAway()">Hayır</button>
                 </div>
-                <div class="love-note">
-                    
-                </div>
+                <div class="love-note"></div>
             </div>
 
             <div class="teddy-paw-right">🐾</div>
@@ -131,7 +137,7 @@
 
     <div class="hover-message" id="hoverMessage">Hayır seçeneği bir alternatif değil! 😜💕</div>
 
-    <!-- Fon Müziği (İstersen kaynak linkini değiştirebilirsin) -->
+    <!-- Fon Müziği Ayarı -->
     <audio id="bgMusic" loop preload="auto">
         <source src="Sade - Your Love Is King - Official - 1984.mp3" type="audio/mpeg">
     </audio>
@@ -169,7 +175,6 @@
         let runAwayCount = 0;
         let messageTimeout = null;
 
-        // BUTONA BASTIKÇA ÇIKACAK TÜRKÇE EĞLENCELİ MESAJLAR
         const funnyMessages = [
             "Haha! İyi denemeydi! 😜💕",
             "I-ıh, o buton senden kaçıyor! 😏",
@@ -283,7 +288,6 @@
         createParticles();
     </script>   
     <script>
-        // MÜZİK KONTROLÜ
         const music = document.getElementById('bgMusic');
         const musicBtn = document.getElementById('musicToggle');
         let isMusicPlaying = false;
